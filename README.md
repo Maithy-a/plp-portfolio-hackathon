@@ -21,9 +21,11 @@ This portfolio website showcases:<br>
 ✅ Organized file structure<br>
 ✅ Semantic HTML tags<br>
 
-### Screenshots
+### Preview
 
-> *✦ Coming soon – once final UI is completed.*
+→ [Click here to view the live website](https://maithya.vercel.app/) ✦
+
+![Screenshot](assets/images/portfolio.png)
 
 ### Lessons learned
 This challenge helped me:<br>
