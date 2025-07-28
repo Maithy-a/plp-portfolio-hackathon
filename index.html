@@ -4,8 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Hi, I'm Maithya. A Software Engineer & Designer specializing in building intuitive digital experiences that blend clean design with powerful functionality.">
+
+    <meta name="keywords"
+        content="Software Engineer, Designer, Web Development, UI/UX, Frontend Developer, Backend Developer, Full Stack Developer, Portfolio, Personal Website">
+
+    <meta name="author" content="Bonface Maithya">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="Bonface Maithya - Software Engineer & Designer">
+    <meta property="og:description"
+        content="Hi, I'm Maithya. A Software Engineer & Designer specializing in building intuitive digital experiences that blend clean design with powerful functionality.">
+
+
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="assets/images/logo.svg" type="image/x-icon">
+
+
+    <link rel="shortcut icon" href="assets/images/favicon/circle.png" type="image/x-icon">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,26 +36,36 @@
 
 <body>
 
-    <div class="nav">
-        <div class="nav_logo">
-            <a href="index.html">BMaithya</a>
-        </div>
+    <header>
+        <nav class="nav">
+            <div class="nav_logo">
+                <a href="#">BMaithya</a>
+            </div>
+            <span class="divider-v l"></span>
 
-        <span class="divider-v"></span>
 
-        <div class="nav_links">
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#works">Works</a>
-            <a href="#">Contact</a>
-        </div>
+            <span for="nav-toggle" class="nav-toggle" aria-controls="nav-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-menu">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 8l16 0" />
+                    <path d="M4 16l16 0" />
+                </svg>
+            </span>
 
-        <span class="divider-v"></span>
-        <a href="https://cal.com/bmaithya" target="_blank">
-            <div class="btn">Book a Call</div>
-        </a>
+            <div class="nav_links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#works" class="nav-link">Works</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <span class="divider-v"></span>
 
-    </div>
+                <a href="https://cal.com/bmaithya" target="_blank" class="btn">Book a Call</a>
+            </div>
+
+        </nav>
+    </header>
 
     <section id="home">
         <div class="home_content">
@@ -63,19 +90,26 @@
                 ideas
                 to
                 life
-                from concept to code. Whether it's crafting sleek interfaces or architecting scalable systems, I’m
+                from concept to code. Whether it's crafting sleek interfaces or designing scalable systems, I’m
                 passionate
                 about turning bold ideas into user-focused products that make an impact.
             </p>
-            <a href="https://drive.google.com/file/d/1-i4Kw9NBT5-lBzKTFB6njd6SxfPxniAg/view?usp=drive_link"
-                target="_blank"> <span class="btn">Get CV</span></a>
+            <div class="hero-btn-group">
+                <a href="https://drive.google.com/file/d/1-i4Kw9NBT5-lBzKTFB6njd6SxfPxniAg/view?usp=drive_link"
+                    target="_blank">
+                    <div class="btn hero-btn">Get CV</div>
+                </a>
+                <a href="">
+                    <div class="active-btn">Active</div>
+                </a>
+            </div>
         </div>
     </section>
 
     <section id="about">
         <div class="about_content">
-            <h2>About</h2>
-            <p>
+            <h2 class="heading">About</h2>
+            <p class="about-biography">
                 I'm Bonface Maithya, a design engineer based in Kenya.
                 <br /><br />
 
@@ -102,78 +136,122 @@
                 <i> → I don’t just build interfaces. <b>I build interfaces that work.</b></i>
             </p>
 
+            <h2 class="heading">Interests</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet eligendi fuga quas autem saepe
+                temporibus obcaecati nam ipsam, tempora, minima beatae nemo. Accusamus, praesentium aliquid aperiam
+                nihil aspernatur ea. Blanditiis?
+            </p>
+
+            <div class="interest-container">
+                <div class="interest-cards tilt-right">
+                    <div class="card-content" id="orange">
+                        <div class="title-number orange">01.</div>
+                        <div class="card-title">Web development</div>
+                        <div class="interest-description">
+                            Exploring modern frameworks and best practices. Is my go to. I'm always fueled and eager to
+                            learn more.
+                        </div>
+                    </div>
+                </div>
+                <div class="interest-cards tilt-left">
+                    <div class="card-content" id="blue">
+                        <div class="title-number blue">02.</div>
+                        <div class="card-title">UI/UX Design</div>
+                        <div class="interest-description">
+                            I have so much love for design that I'm always eager to be impactful in designing, and share
+                            the magic to others.
+                        </div>
+                    </div>
+                </div>
+                <div class="interest-cards tilt-right">
+                    <div class="card-content" id="pink">
+                        <div class="title-number pink">03.</div>
+                        <div class="card-title">Tech Innovations</div>
+                        <div class="interest-description">
+                            I have so much love for design that I'm always eager to be impactful in designing, and share
+                            the magic to others. </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="programming-tool">
+                <h2 class="heading">
+                    Tech stack
+                </h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam sunt quis inventore voluptatum nemo
+                    quidem ad, natus quia voluptatem tenetur necessitatibus alias reiciendis accusamus, ipsam, explicabo
+                    saepe eius rerum quas?
+                </p>
+            </div>
         </div>
+    </section>
 
-        <section id="experience">
-            <div class="experience_content">
-                <h2>Experience</h2>
-                <p>
-                    Here are some of my recent projects that showcase my skills in design and development.
-                    Each project reflects my commitment to quality, user experience, and innovative solutions.
-                </p>
+    <section id="experience">
+        <div class="experience_content">
+            <h2 class="heading">Experience</h2>
+            <p>
+                Here are some of my recent projects that showcase my skills in design and development.
+                Each project reflects my commitment to quality, user experience, and innovative solutions.
+            </p>
 
-                <div class="experience_item">
-                    <div>July 2025 - Present</div>
-                    <div class="role">
-                        PLP July 2025 Cohort
-                        <a href="#" class="badge pink-badge"><i class="ti ti-link"></i> PLP</a>
-                    </div>
-                </div>
-                <div class="experience_item">
-                    <div>Jul 2024 - Present</div>
-                    <div class="role">
-                        Freelancing at
-                        <a href="https://bmaithya.vercel.app/" target="_blank" class="badge blue-badge"> <i
-                                class="ti ti-link"></i> bmaithya </a>
-                    </div>
-                </div>
-                <div class="experience_item">
-                    <div>Jan 2024 - Apr 2024</div>
-                    <div class="role">
-                        Attachment role at
-                        <a href="#" class="badge green-badge"> <i class="ti ti-link"></i> MCRH</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="education">
-            <div class="education_content">
-                <h2>Education</h2>
-                <p>
-                    Recent institutions on higher learning which has shaped me to be the developer I am today, and also
-                    continued shaping to be greater
-                </p>
-
-                <div class="education_item">
-                    <div>July 2025 - Present</div>
-                    <div class="role">
-                        MERN stack development
-                        <a href="#" class="badge pink-badge"><i class="ti ti-link"></i> PLP</a>
-                    </div>
-                </div>
-                <div class="education_item">
-                    <div>Jan 2025 - Present</div>
-                    <div class="role">
-                        Bachelor of science in Information Technology
-                        <a href="#" class="badge green-badge"><i class="ti ti-link"></i> JKUAT</a>
-                    </div>
-                </div>
-                <div class="education_item">
-                    <div>Sep 2022 - Nov 2024</div>
-                    <div class="role">
-                        Diploma Information Technology
-                        <a href="#" class="badge green-badge"> <i class="ti ti-link"></i>JKUAT</a>
-                    </div>
+            <div class="experience_item">
+                <div>July 2025 <span class="dash"></span> Present</div>
+                <div class="role">
+                    PLP July 2025 Cohort
+                    <a href="#" class="badge pink-badge"><i class="ti ti-link"></i> PLP</a>
                 </div>
             </div>
-        </section>
+
+            <div class="experience_item">
+                <div>Jan 2024 <span class="dash"></span> Apr 2024</div>
+                <div class="role">
+                    Attachment role at
+                    <a href="#" class="badge green-badge"> <i class="ti ti-link"></i> MCRH</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="education_content">
+            <h2 class="heading">Education</h2>
+            <p>
+                Recent institutions on higher learning which has shaped me to be the developer I am today, and also
+                continued shaping to be greater.
+            </p>
+
+            <div class="education_item">
+                <div>July 2025 <span class="dash"></span> Present</div>
+                <div class="role">
+                    MERN stack development
+                    <a href="#" class="badge pink-badge"><i class="ti ti-link"></i> PLP</a>
+                </div>
+            </div>
+            <div class="education_item">
+                <div>Jan 2025 <span class="dash"></span> Present</div>
+                <div class="role">
+                    Bachelor of science in Information Technology
+                    <a href="#" class="badge green-badge"><i class="ti ti-link"></i> JKUAT</a>
+                </div>
+            </div>
+            <div class="education_item">
+                <div>Sep 2022 <span class="dash"></span> Nov 2024</div>
+                <div class="role">
+                    Diploma Information Technology
+                    <a href="#" class="badge green-badge"> <i class="ti ti-link"></i>JKUAT</a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="works">
         <div class="works_content">
-            <h2>Here's What I've Been Up To.</h2>
+            <h2 class="heading">Here's What I've Been Up To.</h2>
             <p>
                 Here are some of my recent projects that showcase my skills in design and development.
                 Each project reflects my commitment to quality, user experience, and innovative solutions.
@@ -183,20 +261,21 @@
                 <div class="project-card">
                     <div class="project-image">
                         <span class="project-link">Project link <i class="ti ti-link"></i> </span>
-                        <img src="assets/images/chainfunds.png" alt="Nike Shoe">
+                        <img src="assets/images/projects/chainfund.png" alt="chainfunds">
                     </div>
 
                     <div class="project-info">
-                        <h2>Chainfunds</h2>
-                        <p>System that allows users to securely connect multiple bank accounts, track real-time
+                        <h2 class="project-title">Chainfunds</h2>
+                        <p class="project-description">System that allows users to securely connect multiple bank
+                            accounts, track real-time
                             transactions, and send funds using a seamless and secure interface.</p>
 
                         <div class="project-footer">
-                            <span class="tools">Nextjs</span>
-                            <span class="tools">Typescript</span>
-                            <span class="tools">Appwrite</span>
-                            <span class="tools">Plaid</span>
-                            <span class="tools">Tailwind css</span>
+                            <span class="tech-stack">Nextjs</span>
+                            <span class="tech-stack">Typescript</span>
+                            <span class="tech-stack">Appwrite</span>
+                            <span class="tech-stack">Plaid</span>
+                            <span class="tech-stack">Tailwind css</span>
                         </div>
                     </div>
                 </div>
@@ -204,18 +283,19 @@
                 <div class="project-card">
                     <div class="project-image">
                         <span class="project-link">Project link <i class="ti ti-link"></i> </span>
-                        <img src="assets/images/portfolio.png" alt="Nike Shoe">
+                        <img src="assets/images/projects/portfolio.png" alt="portfolio">
                     </div>
 
                     <div class="project-info">
-                        <h2>Portfolio</h2>
-                        <p>A clean and responsive personal portfolio website built with only HTML and CSS for the July
+                        <h2 class="project-title">Portfolio</h2>
+                        <p class="project-description">A clean and responsive personal portfolio website built with only
+                            HTML and CSS for the July
                             2025 Hackathon challenge.</p>
 
                         <div class="project-footer">
-                            <span class="tools">HTML</span>
-                            <span class="tools">CSS</span>
-                            <span class="tools">Vercel</span>
+                            <span class="tech-stack">HTML</span>
+                            <span class="tech-stack">CSS</span>
+                            <span class="tech-stack">Vercel</span>
                         </div>
                     </div>
                 </div>
@@ -223,22 +303,23 @@
                 <div class="project-card">
                     <div class="project-image">
                         <span class="project-link">Project link <i class="ti ti-link"></i> </span>
-                        <img src="assets/images/tourvisto.png" alt="resume analyser">
+                        <img src="assets/images/projects/tourvisto.png" alt="resume analyser">
                     </div>
 
                     <div class="project-info">
-                        <h2>Tourvisto</h2>
-                        <p>A modern travel agency platform with an admin dashboard and public site. Generate AI-powered
+                        <h2 class="project-title">Tourvisto</h2>
+                        <p class="project-description">A modern travel agency platform with an admin dashboard and
+                            public site. Generate AI-powered
                             trip itineraries based on country, travel style, interests, group type, and budget — and
                             book trips with ease.</p>
 
                         <div class="project-footer">
-                            <span class="tools">Syncfusion</span>
-                            <span class="tools">React router</span>
-                            <span class="tools">Appwrite</span>
-                            <span class="tools">Vite</span>
-                            <span class="tools">Tailwind</span>
-                            <span class="tools">React 19</span>
+                            <span class="tech-stack">Sync-fusion</span>
+                            <span class="tech-stack">React router</span>
+                            <span class="tech-stack">Appwrite</span>
+                            <span class="tech-stack">Vite</span>
+                            <span class="tech-stack">Tailwind</span>
+                            <span class="tech-stack">React 19</span>
                         </div>
                     </div>
                 </div>
@@ -246,21 +327,22 @@
                 <div class="project-card">
                     <div class="project-image">
                         <span class="project-link">Project link <i class="ti ti-link"></i> </span>
-                        <img src="assets/images/snapcast.png" alt="snapcast">
+                        <img src="assets/images/projects/snapCast.png" alt="snap cast">
                     </div>
 
                     <div class="project-info">
-                        <h2>Snap Cast</h2>
-                        <p>Screen recording and sharing app, that makes screen recording easy from walkthroughs to full
+                        <h2 class="project-title">Snap Cast</h2>
+                        <p class="project-description">Screen recording and sharing app, that makes screen recording
+                            easy from walkthroughs to full
                             presentations, smooth and sharable in seconds</p>
 
                         <div class="project-footer">
-                            <span class="tools">Nextjs</span>
-                            <span class="tools">Typescript</span>
-                            <span class="tools">Tailwind</span>
-                            <span class="tools">Arcjet</span>
-                            <span class="tools">Better Auth</span>
-                            <span class="tools">Bunny.net</span>
+                            <span class="tech-stack">Nextjs</span>
+                            <span class="tech-stack">Typescript</span>
+                            <span class="tech-stack">Tailwind</span>
+                            <span class="tech-stack">Arcjet</span>
+                            <span class="tech-stack">Better Auth</span>
+                            <span class="tech-stack">Bunny.net</span>
                         </div>
                     </div>
                 </div>
@@ -269,33 +351,53 @@
         </div>
     </section>
 
-    <div class="divider-h"></div>
-
     <section id="contact">
         <div class="contact_content">
-            <h2>Get in touch</h2>
+            <h2 class="heading">Get in touch</h2>
             <p>
                 Building something that needs to convert?
                 Interested in working together or just want to say hi?<br> Feel free to reach out!
                 I'm down to work on projects that solve real problems. <br> Hit me up if you're serious about results.
             </p>
 
-            <div class="salute">
-                <a href="">
-                    <div class="btn">
-                        Shoot a message
-                    </div>
-                </a>
-                or
-                <a href="">
-                    <div class="btn-ghost">
-                        Book a meeting
-                    </div>
-                </a>
+            <div class="contact_container">
+                <div class="action-group">
+                    <a href="mailto:bmaithya000@gmail.com">
+                        <div class="btn">
+                            Shoot a message
+                        </div>
+                    </a>OR
+                    <a href="https://cal.com/bmaithya">
+                        <div class="btn-ghost">
+                            Book a meeting
+                        </div>
+                    </a>
+                </div>
+
+                <div class="contact-form">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+
+                        <input type="hidden" name="access_key" value="60e64807-ea88-4fac-9838-5e1d2b6d32f5"
+                            aria-hidden="true">
+
+                        <input aria-required="true" type="text" name="name" placeholder="John Doe" autocomplete="name"
+                            required>
+
+                        <input aria-required="true" type="email" name="email" autocomplete="email"
+                            placeholder="johndoe@gmail.com" required>
+
+                        <textarea name="message" rows="5"
+                            placeholder="Lorem ipsum dolor sit amet consectetur, adipisicing elit." required>
+                        </textarea>
+
+                        <button class="btn" type="submit">Send Message</button>
+
+                    </form>
+                </div>
+
             </div>
-
-
         </div>
+
     </section>
 
 </body>
