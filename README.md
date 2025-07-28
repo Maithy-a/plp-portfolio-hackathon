@@ -31,9 +31,9 @@ Built with accessibility and mobile responsiveness in mind, this site reflects b
 
 ### Preview
 
-→ [Click here to view the live website](https://maithya.vercel.app/) ✦
+→ [Click here to view the live website](https://maithya.vercel.app) ✦
 
-![Screenshot](assets/images/portfolio.png)
+![Screenshot](assets/images/projects/portfolio.png "Portfolio")
 
 ### Getting Started
 
