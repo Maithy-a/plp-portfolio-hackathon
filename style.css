@@ -260,6 +260,7 @@ p {
     border-radius: 100%;
     overflow: hidden;
 }
+
 @media screen and (max-width: 768px) {
     .profile_photo {
         width: 50px;
@@ -301,7 +302,7 @@ p {
 }
 
 .hero-btn {
-    padding: .8rem 2rem;
+    padding: .8rem 4rem;
     border-radius: var(--radius);
     transition: box-shadow .3s ease-in-out;
 }
@@ -313,11 +314,28 @@ p {
 .active-btn {
     color: var(--primary-color);
     background-color: #7dfdb1;
+    border: var(--accent-green) 1px;
     font-weight: 600;
+    animation: breathing 4s ease-in-out infinite alternate;
+}
+
+@keyframes breathing {
+    0% {
+        box-shadow: 0 0 0 1px var(--accent-green-light);
+    }
+
+    50% {
+        box-shadow: 0 0 0 6px var(--accent-green-light);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 var(--accent-green-light);
+    }
 }
 
 .active-btn:hover {
     background: var(--accent-green-light);
+    border: var(--accent-green-light) 1px;
 }
 
 @media screen and (max-width: 500px) {
@@ -790,8 +808,8 @@ footer {
 
 @media (max-width: 600px) {
     .footer_right a svg {
-        width: var(--text-sm);
-        height: var(--text-sm);
+        width: var(--text-lg);
+        height: var(--text-lg);
     }
 
     .footer_content {
