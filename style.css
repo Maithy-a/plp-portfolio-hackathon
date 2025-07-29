@@ -124,6 +124,7 @@ header {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .nav_logo a {
     font-size: var(--text-xl);
     color: var(--primary-color);
@@ -171,7 +172,7 @@ header {
 
 .divider-v {
     display: inline-block;
-    height: 1.5rem;
+    height: 1rem;
     width: 1px;
     background-color: var(--accent-border);
 }
@@ -201,7 +202,6 @@ header {
     .divider-v {
         display: none;
     }
-
 }
 
 section {
@@ -222,11 +222,11 @@ section {
     }
 }
 
-
 .home_content,
 .about_content,
 .works_content,
-.contact_content {
+.contact_content,
+.footer_content {
     max-width: 800px;
     margin: 0 auto;
 }
@@ -235,12 +235,12 @@ section {
     .home_content,
     .about_content,
     .works_content,
-    .contact_content {
+    .contact_content,
+    .footer_content {
         width: 100%;
         text-align: center;
     }
 }
-
 
 /* Home Section */
 
@@ -342,7 +342,6 @@ p {
     }
 }
 
-
 /* About */
 #about {
     background: url('assets/images/bg/concrete-wall.png');
@@ -350,6 +349,11 @@ p {
 
 .about-biography {
     margin-bottom: 6rem;
+}
+
+/*about > Interest*/
+#interest {
+    margin-top: 12rem;
 }
 
 .interest-container {
@@ -360,8 +364,24 @@ p {
     margin: 0 auto;
 }
 
+.pin-img {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+@media screen and (max-width: 500px) {
+    .pin-img {
+        top: 0.85rem;
+    }
+}
+
 .interest-cards {
-    aspect-ratio: 1;
+    width: fit-content;
+    height: fit-content;
     border-radius: var(--radius);
     padding: 0.68rem;
     background: var(--accent-color);
@@ -388,22 +408,27 @@ p {
 }
 
 .card-content {
-    margin-top: calc(25%);
     padding: 12px;
     border-radius: var(--radius);
     font-size: var(--text-sm);
 }
 
+@media screen and (max-width: 500px) {
+    .card-content {
+        padding: 12px;
+    }
+}
+
 #orange {
-    background-color: #feeed3;
+    background:url("assets/images/bg/notebook-dark.png"), #feeed3;
 }
 
 #blue {
-    background-color: var(--accent-blue01);
+    background:url("assets/images/bg/notebook-dark.png"), var(--accent-blue01);
 }
 
 #pink {
-    background-color: var(--accent-pink-bg);
+    background: url("assets/images/bg/notebook-dark.png"),var(--accent-pink-bg);
 }
 
 .orange {
@@ -430,13 +455,39 @@ p {
     font-size: var(--text-xl);
 }
 
-
 .programming-tool {
+    margin-top: 12rem;
+}
+
+/* about > programming-tool > skills */
+.skill-set {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 6rem;
 }
 
-/* education & experience */
+.skill-set-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    vertical-align: center;
+    gap: 1.3rem;
+    padding-top: 1.3rem;
+    margin: 0 auto;
+}
 
+.skill-set-group img {
+    width: 3.5rem;
+    aspect-ratio: 1;
+    padding: 0.5rem;
+   background: var(--primary-color);
+    border-radius: var(--radius);
+}
+
+
+/* education & experience */
 .experience_content,
 .education_content {
     max-width: 800px;
@@ -553,7 +604,6 @@ p {
 .project-image img:hover {
     filter: sepia(10);
 }
-
 
 .project-link {
     position: absolute;
@@ -673,5 +723,66 @@ p {
         display: none;
         width: 100%;
     }
+}
 
+
+footer {
+    /*background-color: var(--primary-color);*/
+    color: var(--primary-color);
+    padding: 1.5rem 2rem;
+    font-size: var(--text-sm, 0.9rem);
+
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--accent-light, rgba(255, 255, 255, 0.1));
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1.5rem;
+}
+
+.footer_left {
+    font-weight: 500;
+    font-family: var(--font), serif;
+}
+
+.footer_right {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer_right a {
+    color: var(--primary-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer_right a svg {
+    width: var(--text-lg);
+    height: var(--text-lg);
+}
+
+.footer_right a:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .footer_right a svg {
+        width: var(--text-sm);
+        height: var(--text-sm);
+    }
+
+    .footer_content {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 1rem;
+    }
+
+    .footer_right {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
