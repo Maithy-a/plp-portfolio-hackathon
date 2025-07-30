@@ -277,7 +277,6 @@ p {
 
 /* Home Section */
 #home {
-    height: 100vh;
     background: url('assets/images/bg/bg01.svg') center/cover local no-repeat;
 }
 
