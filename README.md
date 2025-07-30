@@ -1,5 +1,7 @@
 ## PLP JULY 2025 COHORT HACKATHON
 
+[<img src="assets/images/cover.png" alt="cover image">](https://maithya.vercel.app)
+<br>
 Welcome to my personal portfolio website — a clean, responsive, and fully custom-built site created for the **PLP July 2025 Hackathon**. This project was built using **HTML and CSS only**, with no frameworks or JavaScript involved.
 
 ### Overview

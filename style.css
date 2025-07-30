@@ -277,7 +277,7 @@ p {
 
 /* Home Section */
 #home {
-    background: url('assets/images/bg/bg01.svg') center/cover local no-repeat;
+    background: url('assets/images/bg/bg01.svg') center/cover fixed no-repeat;
 }
 
 .profile {
@@ -390,7 +390,7 @@ p {
 
 /* About */
 #about {
-    background: url('assets/images/bg/concrete-wall.png');
+    background: url('assets/images/bg/');
 }
 
 .about-biography {
