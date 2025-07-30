@@ -1,8 +1,8 @@
 ## PLP JULY 2025 COHORT HACKATHON
 
 [<img src="assets/images/cover.png" alt="cover image">](https://maithya.vercel.app)
-<br>
-Welcome to my personal portfolio website — a clean, responsive, and fully custom-built site created for the **PLP July 2025 Hackathon**. This project was built using **HTML and CSS only**, with no frameworks or JavaScript involved.
+<div></div>
+Welcome to my personal portfolio website — a clean, responsive, and fully custom-built site created for the **PLP July 2025 Hackathon**. This project is built using **HTML and CSS only**, with no frameworks or JavaScript involved.
 
 ### Overview
 
@@ -27,13 +27,9 @@ Built with accessibility and mobile responsiveness in mind, this site reflects b
 ✅ Well-organized file structure<br>
 ✅ Semantic HTML tags<br>
 
-### Project structure
-
-> _✦ Coming soon._
-
 ### Preview
 
-→ [Click here to view the live website](https://maithya.vercel.app) ✦
+→ [✦ Live Preview](https://maithya.vercel.app) ✦
 
 [<img src="assets/images/website.png" alt="Website preview">](https://maithya.vercel.app)
 
@@ -51,7 +47,6 @@ To view or edit this project locally:
    ```
 3. Open index.html in your browser<br>
 ✦ You can also use an extension like Live Server in VS Code for live previews.
-
 
 ### Submission info
 
