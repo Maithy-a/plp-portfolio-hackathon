@@ -623,7 +623,6 @@ p {
 }
 
 @media (max-width: 768px) {
-
     .experience_item,
     .education_item {
         flex-direction: column;
