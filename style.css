@@ -410,9 +410,7 @@ p {
 }
 
 /* About */
-#about {
-    background: url('assets/images/bg/');
-}
+
 
 .about-biography {
     margin-bottom: 6rem;
@@ -488,15 +486,15 @@ p {
 }
 
 #orange {
-    background: url("assets/images/bg/notebook-dark.png"), #feeed3;
+    background-color: #feeed3;
 }
 
 #blue {
-    background: url("assets/images/bg/notebook-dark.png"), var(--accent-blue01);
+    background-color: var(--accent-blue01);
 }
 
 #pink {
-    background: url("assets/images/bg/notebook-dark.png"), var(--accent-pink-bg);
+    background-color: var(--accent-pink-bg);
 }
 
 .orange {
