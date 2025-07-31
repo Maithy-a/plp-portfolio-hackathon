@@ -292,7 +292,7 @@ p {
 
 /* Home Section */
 #home {
-    background: url('assets/images/bg/bg01.svg') center/cover fixed no-repeat, #fff;
+    background: url('assets/images/bg/bg01.svg') center/cover fixed no-repeat, #f8fbff;
 }
 
 .profile {
@@ -638,7 +638,9 @@ p {
 }
 
 /* Works */
-
+#works{
+    background: url('assets/images/bg/bg03.png') fixed ;
+}
 .work_container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
