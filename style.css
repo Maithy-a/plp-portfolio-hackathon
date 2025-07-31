@@ -534,6 +534,7 @@ p {
     align-items: center;
     gap: 1.5rem;
     margin-top: 4rem;
+    filter: drop-shadow(20px 20px 200px var(--accent-blue));
 }
 
 .skill-set-group {
