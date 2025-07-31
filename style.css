@@ -59,6 +59,32 @@ body {
     line-height: var(--line-h);
 }
 
+section {
+    padding: 12rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.heading {
+    font-family: var(--font), serif;
+    font-size: var(--text-4xl);
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: var(--text-base);
+    color: var(--accent-gray);
+    margin-bottom: 2rem;
+    line-height: 2;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 6rem 4rem;
+    }
+}
+
 a {
     text-decoration: none;
 }
@@ -146,10 +172,12 @@ header {
 .nav-item {
     color: var(--primary-color);
     font-size: var(--text-base);
+    transition: color 0.3s ease-in-out;
 }
 
 .nav-item:hover {
     color: var(--accent-blue);
+    font-weight: 600;
 }
 
 a.btn-nav {
@@ -187,7 +215,7 @@ a.btn-nav:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0.5rem 1rem;
-    width: 95%;
+    width: 90%
   }
 
   .nav-toggle {
@@ -243,33 +271,6 @@ a.btn-nav:hover {
   }
 }
 
-
-section {
-    padding: 12rem;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.heading {
-    font-family: var(--font), serif;
-    font-size: var(--text-4xl);
-    cursor: pointer;
-    margin-bottom: 1rem;
-}
-
-p {
-    font-size: var(--text-base);
-    color: var(--accent-gray);
-    margin-bottom: 2rem;
-    line-height: 2;
-}
-
-@media (max-width: 768px) {
-    section {
-        padding: 6rem 4rem;
-    }
-}
-
 .home_content,
 .about_content,
 .works_content,
@@ -280,7 +281,6 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-
     .home_content,
     .about_content,
     .works_content,
@@ -548,7 +548,6 @@ p {
     padding: 0.5rem;
     background: var(--primary-color);
     border-radius: var(--radius);
-    box-shadow: var(--shadow);
     transition: transform 0.3s ease;
 }
 
@@ -633,6 +632,11 @@ p {
         margin-left: 0;
         margin-top: 4px;
     }
+}
+
+/*process*/
+.process_content{
+    padding: 1.5rem 2rem;
 }
 
 /* Works */
@@ -826,7 +830,6 @@ footer {
     color: var(--primary-color);
     padding: 1.5rem 2rem;
     font-size: var(--text-sm, 0.9rem);
-
 }
 
 .footer_content {
