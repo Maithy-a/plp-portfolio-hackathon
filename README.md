@@ -29,24 +29,24 @@ Built with accessibility and mobile responsiveness in mind, this site reflects b
 
 ### Preview
 
-⇝ [✦ Live Preview](https://maithya.vercel.app) ✦
+[✦ Live Preview ✦](https://maithya.vercel.app)
 
 [<img src="assets/images/website.png" alt="Website preview">](https://maithya.vercel.app)
 
 ### Getting Started
 
-To view or edit this project locally:
+To view or edit this project locally :
 
 1. **Clone the repo:**
    ```bash
-   git clone https://github.com/Maithy-a/plp-portfolio-hackathon.git
+      git clone https://github.com/Maithy-a/plp-portfolio-hackathon.git
    ```
 2. Navigate into the project folder:
    ```bash
-     cd plp-portfolio-hackathon
+      cd plp-portfolio-hackathon
    ```
 3. Open index.html in your browser<br>
-✦ You can also use an extension like Live Server in VS Code for live previews.
+   ✦ You can also use an extension like Live Server in VS Code for live previews.
 
 ### Submission info
 
