@@ -52,6 +52,10 @@
     scrollbar-width: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--accent-color);
     color: var(--primary-color);
@@ -128,6 +132,7 @@ header {
     width: 820px;
     left: 50%;
     transform: translateX(-50%);
+    animation: navFadeIn 2s ease-in-out forwards;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -216,7 +221,7 @@ a.btn-nav:focus {
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 0.5rem 1rem;
-        width: 90%
+        width: 90%;
     }
 
     .nav-toggle {
@@ -269,6 +274,18 @@ a.btn-nav:focus {
     a.btn-nav {
         padding: 0.68rem 2rem;
         width: 100%;
+    }
+}
+
+@keyframes navFadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -20%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
     }
 }
 
