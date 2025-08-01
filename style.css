@@ -50,7 +50,6 @@
     /* Hide scrollbar */
     -ms-overflow-style: none;
     scrollbar-width: none;
-
 }
 
 body {
@@ -65,10 +64,15 @@ section {
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    section {
+        padding: 6rem 4rem;
+    }
+}
+
 .heading {
     font-family: var(--font), serif;
     font-size: var(--text-4xl);
-    cursor: pointer;
     margin-bottom: 1rem;
 }
 
@@ -77,12 +81,6 @@ p {
     color: var(--accent-gray);
     margin-bottom: 2rem;
     line-height: 2;
-}
-
-@media (max-width: 768px) {
-    section {
-        padding: 6rem 4rem;
-    }
 }
 
 a {
@@ -126,7 +124,7 @@ header {
     backdrop-filter: blur(20px);
     padding: 0.3rem 0.4rem;
     position: absolute;
-    top: 1.2rem;
+    top: 2rem;
     width: 820px;
     left: 50%;
     transform: translateX(-50%);
@@ -139,11 +137,12 @@ header {
     text-decoration: none;
     font-family: var(--font), serif;
     font-weight: 900;
-    padding: 6px;
+    padding-left: 16px;
     transition: color 0.3s ease;
 }
 
-.nav-logo a:hover {
+.nav-logo a:hover,
+.nav-logo a:focus {
     color: var(--secondary-color);
 }
 
@@ -172,10 +171,11 @@ header {
 .nav-item {
     color: var(--primary-color);
     font-size: var(--text-base);
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease, font-weight 0.3s ease-in-out;
 }
 
-.nav-item:hover {
+.nav-item:hover,
+.nav-item:focus {
     color: var(--accent-blue);
     font-weight: 600;
 }
@@ -185,7 +185,8 @@ a.btn-nav {
     border-radius: .78rem;
 }
 
-a.btn-nav:hover {
+a.btn-nav:hover,
+a.btn-nav:focus {
     background-color: var(--accent-gray01);
 }
 
@@ -205,8 +206,8 @@ a.btn-nav:hover {
 
 .divider-v {
     display: inline-block;
-    height: 1rem;
-    width: 1px;
+    height: 1.2rem;
+    width: 0.1rem;
     background-color: var(--accent-border);
 }
 
@@ -271,9 +272,10 @@ a.btn-nav:hover {
     }
 }
 
-.home_content,
+.hero-content,
 .about_content,
 .works_content,
+.approach-content,
 .contact_content,
 .footer_content {
     max-width: 800px;
@@ -282,17 +284,18 @@ a.btn-nav:hover {
 
 @media screen and (max-width: 768px) {
 
-    .home_content,
+    .hero-content,
     .about_content,
     .works_content,
+    .approach-content,
     .contact_content,
     .footer_content {
         width: 100%;
     }
 }
 
-/* Home Section */
-#home {
+/* hero Section */
+#hero {
     background: url('assets/images/bg/bg01.svg') center/cover fixed no-repeat, #f8fbff;
 }
 
@@ -310,14 +313,15 @@ a.btn-nav:hover {
 }
 
 .profile_photo {
-    width: 68px;
+    width: 70px;
+    cursor: pointer;
     aspect-ratio: 1;
     border-radius: 100%;
     overflow: hidden;
-    animation: breathing 2.5s ease-in-out infinite;
+    animation: pulse 3s ease-in-out infinite;
 }
 
-@keyframes breathing {
+@keyframes pulse {
     0% {
         box-shadow: 0 0 0 0 rgba(30, 144, 255, 0.6);
     }
@@ -335,7 +339,6 @@ a.btn-nav:hover {
     }
 }
 
-
 @media screen and (max-width: 768px) {
     .profile_photo {
         width: 50px;
@@ -349,7 +352,7 @@ a.btn-nav:hover {
 }
 
 .profile_name h2 {
-    font-size: var(--text-lg);
+    font-size: var(--text-xl);
     font-family: var(--font), serif;
     color: var(--primary-color);
     margin: 0;
@@ -363,7 +366,7 @@ a.btn-nav:hover {
     cursor: pointer;
 }
 
-.home_content h1 {
+.hero-content h1 {
     font-size: var(--text-4xl);
     font-weight: 700;
     margin-bottom: 1rem;
@@ -379,10 +382,11 @@ a.btn-nav:hover {
 .hero-btn {
     padding: .8rem 4rem;
     border-radius: var(--radius);
-    transition: box-shadow .3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
-.hero-primary-btn:hover {
+.hero-primary-btn:hover,
+.hero-primary-btn:focus {
     background-color: var(--accent-gray01);
 }
 
@@ -394,7 +398,8 @@ a.btn-nav:hover {
     transition: box-shadow 0.3s ease;
 }
 
-.active-btn:hover {
+.active-btn:hover,
+.active-btn:focus {
     background: var(--accent-green-light);
     border: var(--accent-green-light) 1px;
 }
@@ -411,8 +416,6 @@ a.btn-nav:hover {
 }
 
 /* About */
-
-
 .about-biography {
     margin-bottom: 6rem;
 }
@@ -458,7 +461,8 @@ a.btn-nav:hover {
     text-align: left;
 }
 
-.interest-cards:hover {
+.interest-cards:hover,
+.interest-cards:focus {
     position: relative;
     transform: translateY(-6px);
     z-index: 1;
@@ -533,7 +537,7 @@ a.btn-nav:hover {
     align-items: center;
     gap: 1.5rem;
     margin-top: 4rem;
-    filter: drop-shadow(20px 20px 200px var(--accent-blue));
+    filter: drop-shadow(0px 0px 160px var(--accent-blue));
 }
 
 .skill-set-group {
@@ -549,13 +553,16 @@ a.btn-nav:hover {
     padding: 0.5rem;
     background: var(--primary-color);
     border-radius: var(--radius);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: var(--shadow-md);
 }
 
-.skill-item:hover {
+.skill-item:hover,
+.skill-item:focus {
     transform: scale(1.1);
     z-index: 1;
     cursor: pointer;
+    box-shadow: 0 0 0 6px rgba(122, 122, 122, 0.2);
 }
 
 /* education & experience */
@@ -572,7 +579,7 @@ a.btn-nav:hover {
 
 .dash {
     display: inline-flex;
-    height: 2px;
+    height: 1.3px;
     width: 1rem;
     vertical-align: middle;
     background-color: var(--accent-gray02);
@@ -608,7 +615,8 @@ a.btn-nav:hover {
     color: var(--accent-green);
 }
 
-.green-badge:hover {
+.green-badge:hover,
+.green-badge:focus {
     background-color: var(--accent-green-light);
 }
 
@@ -617,7 +625,8 @@ a.btn-nav:hover {
     color: var(--accent-pink);
 }
 
-.pink-badge:hover {
+.pink-badge:hover,
+.pink-badge:focus {
     background-color: var(--accent-pink-light);
 }
 
@@ -649,7 +658,6 @@ a.btn-nav:hover {
 .work_container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-
     gap: 3rem;
     justify-content: center;
     margin: auto 2rem auto 2rem;
@@ -666,7 +674,8 @@ a.btn-nav:hover {
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
-.project-card:hover {
+.project-card:hover,
+.project-card:focus {
     transform: translateY(-3px);
     box-shadow: var(--shadow-md);
 }
@@ -687,7 +696,8 @@ a.btn-nav:hover {
     transition: filter 0.6s ease-in-out;
 }
 
-.project-image img:hover {
+.project-image img:hover,
+.project-image img:focus {
     filter: brightness(1);
 }
 
@@ -705,7 +715,8 @@ a.btn-nav:hover {
     z-index: 1;
 }
 
-.project-link:hover {
+.project-link:hover,
+.project-link:focus {
     background-color: var(--accent-blue);
     color: var(--accent-color);
 }
@@ -747,9 +758,51 @@ a.btn-nav:hover {
     box-shadow: var(--shadow-sm);
 }
 
+/*approach*/
+.accordion {
+    border-bottom: 1px solid var(--accent-blue);
+}
+
+.accordion-label {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: var(--text-base);
+    padding: 0.75rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-label:hover {
+    background-color: var(--accent-blue01);
+}
+
+.accordion-label i {
+    transition: transform 0.3s ease;
+    font-size: 1rem;
+    margin-left: auto;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 1rem;
+    font-size: var(--text-sm);
+    color: var(--text-color);
+}
+
+.accordion input[type="checkbox"]:checked~.accordion-content {
+    max-height: 200px;
+    padding: 0.75rem 1rem;
+}
+
+.accordion input[type="checkbox"]:checked + .accordion-label i {
+    transform: rotate(180deg);
+}
+
 
 /* contact */
-
 .contact-form {
     margin: 0 auto;
     padding: 1.5rem;
@@ -790,7 +843,8 @@ a.btn-nav:hover {
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.btn-send:hover {
+.btn-send:hover,
+.btn-send:focus {
     background-color: var(--accent-gray01);
     box-shadow: var(--shadow-md);
 }
@@ -828,11 +882,11 @@ a.btn-nav:hover {
     }
 }
 
-
-footer {
+/*footer*/
+#footer {
     color: var(--primary-color);
     padding: 1.5rem 2rem;
-    font-size: var(--text-sm, 0.9rem);
+    font-size: var(--text-base, 0.9rem);
 }
 
 .footer_content {
@@ -858,7 +912,7 @@ footer {
 
 .footer_right a {
     color: var(--primary-color);
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease-in-out;
 }
 
 .footer_right a svg {
@@ -866,12 +920,17 @@ footer {
     height: var(--text-xl);
 }
 
-.footer_right a:hover {
+.footer_right a:hover,
+.footer_right a:focus {
     transform: translateY(-4px);
     color: var(--accent-blue);
 }
 
 @media (max-width: 600px) {
+    #footer {
+        font-size: var(--text-sm, 0.9rem);
+    }
+
     .footer_right a svg {
         width: var(--text-lg);
         height: var(--text-lg);
