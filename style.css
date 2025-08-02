@@ -587,10 +587,6 @@ a.btn-nav:focus {
 }
 
 /* education & experience */
-#experience {
-  padding: 0;
-}
-
 .experience_content,
 .education_content {
   max-width: 800px;
