@@ -109,6 +109,17 @@ a {
     transition: background-color 0.3s ease-in-out;
 }
 
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(0%, -20%);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 /* Navigation */
 header {
     position: sticky;
@@ -132,7 +143,6 @@ header {
     width: 820px;
     left: 50%;
     transform: translateX(-50%);
-    animation: navFadeIn 2s ease-in-out forwards;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -142,7 +152,7 @@ header {
     text-decoration: none;
     font-family: var(--font), serif;
     font-weight: 900;
-    padding-left: 16px;
+    padding-left: 0.3rem;
     transition: color 0.3s ease;
 }
 
@@ -224,6 +234,10 @@ a.btn-nav:focus {
         width: 90%;
     }
 
+    .nav-logo a{
+        padding-left: 0;
+    }
+
     .nav-toggle {
         display: flex;
         cursor: pointer;
@@ -245,8 +259,7 @@ a.btn-nav:focus {
     }
 
     .nav-item {
-        margin-bottom: 0.2rem;
-        border-radius: 0.68rem;
+        margin-bottom: 0.7rem;
         width: 100%;
     }
 
@@ -274,18 +287,6 @@ a.btn-nav:focus {
     a.btn-nav {
         padding: 0.68rem 2rem;
         width: 100%;
-    }
-}
-
-@keyframes navFadeIn {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -20%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(-50%, 0);
     }
 }
 
@@ -321,6 +322,7 @@ a.btn-nav:focus {
     align-items: center;
     gap: 1rem;
     margin-bottom: 2rem;
+    animation: alternate 3s ease-in-out FadeIn;
 }
 
 @media (max-width: 768px) {
@@ -444,10 +446,39 @@ a.btn-nav:focus {
 
 .interest-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
     padding-top: 2rem;
-    gap: 1rem;
     margin: 0 auto;
+    min-width: 300px;
+}
+
+.interest-cards {
+    width: fit-content;
+    height: 250px;
+    border-radius: var(--radius);
+    padding: 0.68rem;
+    background: var(--accent-color);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--accent-light);
+    transition: transform 0.6s ease-in-out, box-shadow .3s ease;
+    cursor: pointer;
+    text-align: left;
+}
+
+.interest-cards:hover,
+.interest-cards:focus {
+    box-shadow: var(--shadow-md);
+    position: relative;
+    transform: translateY(-6px);
+    z-index: 1;
+}
+
+.card-content {
+    padding: 0.4rem;
+    border-radius: var(--radius);
+    font-size: var(--text-sm);
+    height: 100%;
+    width: 100%;
 }
 
 .pin-img {
@@ -465,26 +496,6 @@ a.btn-nav:focus {
     }
 }
 
-.interest-cards {
-    width: fit-content;
-    height: fit-content;
-    border-radius: var(--radius);
-    padding: 0.68rem;
-    background: var(--accent-color);
-    box-shadow: var(--shadow);
-    border: 1px solid var(--accent-light);
-    transition: transform .4s ease-in-out, box-shadow .3s ease;
-    cursor: pointer;
-    text-align: left;
-}
-
-.interest-cards:hover,
-.interest-cards:focus {
-    position: relative;
-    transform: translateY(-6px);
-    z-index: 1;
-}
-
 .tilt-right {
     rotate: 8deg;
     margin-top: 2rem;
@@ -495,17 +506,6 @@ a.btn-nav:focus {
     margin-top: 2rem;
 }
 
-.card-content {
-    padding: 12px;
-    border-radius: var(--radius);
-    font-size: var(--text-sm);
-}
-
-@media screen and (max-width: 768px) {
-    .card-content {
-        padding: 12px;
-    }
-}
 
 #orange {
     background-color: #feeed3;
