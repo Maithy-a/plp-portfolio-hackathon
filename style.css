@@ -682,10 +682,6 @@ a.btn-nav:focus {
   padding: 1.5rem 2rem;
 }
 
-/* Works */
-#works {
-  background: url("assets/images/bg/bg03.png") fixed;
-}
 
 .work_container {
   display: grid;
