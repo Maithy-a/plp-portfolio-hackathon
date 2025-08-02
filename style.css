@@ -345,25 +345,6 @@ a.btn-nav:focus {
   aspect-ratio: 1;
   border-radius: 100%;
   overflow: hidden;
-  animation: pulse 3s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(30, 144, 255, 0.6);
-  }
-
-  40% {
-    box-shadow: 0 0 0 6px rgba(186, 230, 253, 0.6);
-  }
-
-  70% {
-    box-shadow: 0 0 0 10px rgba(186, 230, 253, 0.4);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba(30, 144, 255, 0.6);
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -419,16 +400,30 @@ a.btn-nav:focus {
 
 .active-btn {
   color: green;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   padding: 0.8rem 1.2rem;
   background-color: var(--accent-green-light);
   box-shadow: 0 0 0 0 var(--accent-green);
   transition: box-shadow 0.3s ease;
 }
+.btn-status {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #69ffa8;
+  animation: 1.5s pulse00 infinite ease-in-out;
+}
 
-.active-btn:hover,
-.active-btn:focus {
-  background: var(--accent-green-light);
-  border: var(--accent-green-light) 1px;
+@keyframes pulse00 {
+  0% {
+    box-shadow: 0 0 0 0 #69ffa8;
+  }
+
+  100% {
+    box-shadow: 0 0 0 14px #69ffa800;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -448,9 +443,10 @@ a.btn-nav:focus {
 }
 
 /*about > Interest*/
-/* #interest {
-  margin-top: 12rem;
-} */
+#interest {
+  background: url(assets/images/bg/bg03.png) fixed;
+  background-color: #eef4ff;
+}
 
 .interest-container {
   display: grid;
@@ -550,10 +546,6 @@ a.btn-nav:focus {
   font-size: var(--text-xl);
 }
 
-.programming-tool {
-  margin-top: 12rem;
-}
-
 /* about > programming-tool > skills */
 .skill-set {
   display: flex;
@@ -590,6 +582,10 @@ a.btn-nav:focus {
 }
 
 /* education & experience */
+#experience {
+  padding: 0;
+}
+
 .experience_content,
 .education_content {
   max-width: 800px;
@@ -598,7 +594,6 @@ a.btn-nav:focus {
 
 .timeline {
   font-weight: 500;
-  font-size: large;
 }
 
 .dash {
@@ -616,7 +611,7 @@ a.btn-nav:focus {
   align-items: flex-start;
   margin-bottom: 2rem;
   font-size: var(--text-base);
-  color: var(--accent-gray02);
+  color: #747c87;
 }
 
 .role {
@@ -682,6 +677,10 @@ a.btn-nav:focus {
   padding: 1.5rem 2rem;
 }
 
+/* Works */
+#works {
+  background: url(assets/images/bg/concrete-wall.png);
+}
 
 .work_container {
   display: grid;
@@ -696,8 +695,8 @@ a.btn-nav:focus {
   max-width: 600px;
   overflow: hidden;
   cursor: pointer;
-  background: var(--gradient), url("assets/images/bg/bg02.svg") center no-repeat;
-  background-size: cover;
+  background: var(--gradient),
+    url("assets/images/bg/bg02.svg") center/cover no-repeat;
   box-shadow: var(--shadow);
   transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
@@ -733,9 +732,9 @@ a.btn-nav:focus {
   position: absolute;
   top: 15px;
   right: 15px;
-  background-color: var(--accent-blue01);
+  background-color: var(--primary-color);
   box-shadow: var(--shadow);
-  color: var(--primary-color);
+  color: var(--accent-color);
   font-size: var(--text-xs);
   padding: 10px 20px;
   border-radius: 0.5rem;
