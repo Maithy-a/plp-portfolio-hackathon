@@ -402,11 +402,16 @@ a.btn-nav:focus {
   color: green;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   padding: 0.8rem 1.2rem;
   background-color: var(--accent-green-light);
   box-shadow: 0 0 0 0 var(--accent-green);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 1s ease-in-out;
+}
+.active-btn:hover,
+.active-btn:focus{
+    box-shadow: var(--shadow-md);
 }
 .btn-status {
   width: 12px;
@@ -679,7 +684,8 @@ a.btn-nav:focus {
 
 /* Works */
 #works {
-  background: url(assets/images/bg/concrete-wall.png);
+  background: url(assets/images/bg/concrete-wall.png) center;
+  /* background-color: #f6f6f6; */
 }
 
 .work_container {
@@ -732,9 +738,9 @@ a.btn-nav:focus {
   position: absolute;
   top: 15px;
   right: 15px;
-  background-color: var(--primary-color);
-  box-shadow: var(--shadow);
+  background-color: var(--accent-blue);
   color: var(--accent-color);
+  box-shadow: var(--shadow);
   font-size: var(--text-xs);
   padding: 10px 20px;
   border-radius: 0.5rem;
@@ -744,8 +750,8 @@ a.btn-nav:focus {
 
 .project-link:hover,
 .project-link:focus {
-  background-color: var(--accent-blue);
-  color: var(--accent-color);
+  background-color: var(--accent-blue01);
+  color: var(--primary-color);
 }
 
 .project-info {
