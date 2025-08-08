@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 @font-face {
   font-family: "Pardell";
@@ -410,8 +410,8 @@ a.btn-nav:focus {
   transition: box-shadow 1s ease-in-out;
 }
 .active-btn:hover,
-.active-btn:focus{
-    box-shadow: var(--shadow-md);
+.active-btn:focus {
+  box-shadow: var(--shadow-md);
 }
 .btn-status {
   width: 12px;
@@ -455,16 +455,17 @@ a.btn-nav:focus {
 
 .interest-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   padding-top: 2rem;
   margin: 0 auto;
-  min-width: 300px;
+  font-size: var(--text-sm);
 }
 
 .interest-cards {
   width: fit-content;
-  height: 250px;
-  border-radius: var(--radius);
+  height: fit-content;
+  border-radius: 1.2rem;
+  max-width: 320px;
   padding: 0.68rem;
   background: var(--accent-color);
   box-shadow: var(--shadow);
