@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Pardell";
-  src: url("assets/fonts/Pardell.ttf") format("truetype");
+  src: url("public/fonts/Pardell.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -321,7 +321,7 @@ a.btn-nav:focus {
 
 /* hero Section */
 #hero {
-  background: url("assets/images/bg/bg01.svg") center/cover fixed no-repeat,
+  background: url("public/images/bg/bg01.svg") center/cover fixed no-repeat,
     #f8fbff;
 }
 
@@ -449,7 +449,7 @@ a.btn-nav:focus {
 
 /*about > Interest*/
 #interest {
-  background: url(assets/images/bg/bg03.png) fixed;
+  background: url(public/images/bg/bg03.png) fixed;
   background-color: #eef4ff;
 }
 
@@ -681,7 +681,7 @@ a.btn-nav:focus {
 
 /* Works */
 #works {
-  background: url(assets/images/bg/concrete-wall.png) center;
+  background: url(public/images/bg/concrete-wall.png) center;
   /* background-color: #f6f6f6; */
 }
 
@@ -699,7 +699,7 @@ a.btn-nav:focus {
   overflow: hidden;
   cursor: pointer;
   background: var(--gradient),
-    url("assets/images/bg/bg02.svg") center/cover no-repeat;
+    url("public/images/bg/bg02.svg") center/cover no-repeat;
   box-shadow: var(--shadow);
   transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
